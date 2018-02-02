@@ -11,12 +11,12 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint-config-ca": "^1.0.0",
+    "babel-eslint": "8.2.1",
+    "eslint-config-ca": "3.0.0",
     "html-webpack-plugin": "^2.28.0",
-    "webpack": "^2.2.1",
-    "webpack-config": "^7.0.0",
-    "webpack-config-ca": "^2.0.0",
+    "webpack": "^3.10.0",
+    "webpack-config": "^7.5.0",
+    "webpack-config-ca": "latest",
     "webpack-dev-server": "^2.4.1"
   },
   "scripts": {

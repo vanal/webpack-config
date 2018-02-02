@@ -40,7 +40,6 @@ export default new Config().merge({
   // ADD WEBPACK DEV SERVER CONFIGURATION IN WATCH MODE
   ...(isWebpackDevServer ? {
     devServer: {
-      stats: 'errors-only',
       contentBase: 'build',
       historyApiFallback: true,
       hot: true,

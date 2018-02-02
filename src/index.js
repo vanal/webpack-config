@@ -16,7 +16,7 @@ import eslint from './eslint';
 import flowStatus from './flowStatus';
 import production from './production';
 
-export default Config().merge(
+export default new Config().merge(
   base,
   css,
   scss,
