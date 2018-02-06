@@ -17,11 +17,14 @@ export default new Config().merge({
       compress: {
         screw_ie8: true,
         warnings: false,
+        comparisons: false,
+      },
+      output: {
+        comments: false,
+        ascii_only: true,
       },
     }),
-    new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.optimize.MinChunkSizePlugin({
-      minChunkSize: 2048,
-    }),
+    new webpack.DefinePlugin(env),
+    new webpack.optimize.ModuleConcatenationPlugin(),
   ] : [],
 });
