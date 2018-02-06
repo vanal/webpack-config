@@ -12,6 +12,7 @@ const inProduction = env === 'production';
 
 export default new Config().merge({
   plugins: inProduction ? [
+    new webpack.DefinePlugin(env),
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,
       compress: {
@@ -24,7 +25,6 @@ export default new Config().merge({
         ascii_only: true,
       },
     }),
-    new webpack.DefinePlugin(env),
     new webpack.optimize.ModuleConcatenationPlugin(),
   ] : [],
 });
