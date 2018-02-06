@@ -16,7 +16,7 @@ describe('production config in production mode', () => {
 
   it('should contain UglifyJsPlugin plugin if in production', () => {
     expect(config.plugins[0]).toBeInstanceOf(webpack.optimize.UglifyJsPlugin);
-    expect(config.plugins[1]).toBeInstanceOf(webpack.optimize.AggressiveMergingPlugin);
-    expect(config.plugins[2]).toBeInstanceOf(webpack.optimize.MinChunkSizePlugin);
+    expect(config.plugins[1]).toBeInstanceOf(webpack.DefinePlugin);
+    expect(config.plugins[2]).toBeInstanceOf(webpack.optimize.ModuleConcatenationPlugin);
   });
 });
